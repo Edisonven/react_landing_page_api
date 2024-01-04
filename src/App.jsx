@@ -1,13 +1,16 @@
-import { useState } from "react";
-import "./App.css";
 
+import "./App.css";
+import MiApi from "./components/MiApi";
 function App() {
   return (
     <div>
-      <header>
+      <header className="header">
         <img className="header__img" src="./src/assets/ramlogo.png" alt="" />
         <h1 className="header__title">API</h1>
       </header>
+      <section className="section">
+        <MiApi></MiApi>
+      </section>
     </div>
   );
 }
