@@ -4,3 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+.header__img {
+  width: 100%;
+  max-width: 1200px;
+}
+.header__title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+}
