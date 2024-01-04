@@ -51,6 +51,9 @@
   justify-content: center;
   gap: 5px;
 }
+.card__body  p {
+  font-weight: bold;
+}
 .card__body:hover {
   transform: scale(1.03);
 }
