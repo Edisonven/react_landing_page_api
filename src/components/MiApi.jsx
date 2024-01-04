@@ -11,8 +11,6 @@ const MiApi = () => {
     setPersonaje(data.results);
   };
 
-  //  console.log(personaje.map((e)=> e.name));
-
   useEffect(() => {
     getData();
   }, []);
