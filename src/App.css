@@ -51,11 +51,21 @@
   justify-content: center;
   gap: 5px;
 }
-.card__body  p {
+.card__body p {
   font-weight: bold;
 }
 .card__body:hover {
   transform: scale(1.03);
+}
+.buscador {
+  width: 90%;
+  height: 30px;
+  font-size: 1.2rem;
+  background-color: #e0dcdc;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #141414;
+  font-weight: bold;
 }
 @media (min-width: 576px) {
   .container__fondo {
