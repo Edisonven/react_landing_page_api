@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const MiApi = () => {
   const [personaje, setPersonaje] = useState([]);
-  const personajes = "https://rickandmortyapi.com/api/character";
+  const personajes = "https://rickandmortyapi.com/api/character?page=3";
 
   const getData = async () => {
     const respuesta = await fetch(personajes);
