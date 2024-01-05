@@ -13,10 +13,12 @@
   z-index: -1;
 }
 .header__img {
+  margin-top: 30px;
   width: 100%;
   max-width: 600px;
 }
 .header__title {
+  margin: 0 0 20px;
   font-size: 3rem;
 }
 .card__container {
