@@ -4,7 +4,7 @@ import Buscador from "./components/Buscador";
 import { useState } from "react";
 function App() {
   const [personaje, setPersonaje] = useState([]);
-  const personajes = "https://rickandmortyapi.com/api/character?page=10";
+  const personajes = "https://rickandmortyapi.com/api/character?page=9";
   const [filtro, setFiltro] = useState("");
 
   return (
