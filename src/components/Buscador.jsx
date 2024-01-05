@@ -1,22 +1,14 @@
-const Buscador = ({ setFiltro, personaje }) => {
+const Buscador = ({ setFiltro, filtro }) => {
   const buscarPersonaje = (event) => {
-    if (event.target.value !== "") {
-      const resultados = [...personaje].filter((p) =>
-        Object.values(p).some((valor) =>
-          String(valor).toLowerCase().startsWith(event.target.value.toLowerCase())
-        )
-      );
-
-      setFiltro(resultados);
-    } else {
-      setFiltro("");
-    }
+    setFiltro(event.target.value);
   };
+
   return (
     <>
       <input
         className="buscador"
         placeholder="Buscar Personaje..."
+        value={filtro}
         onChange={buscarPersonaje}
       />
     </>
