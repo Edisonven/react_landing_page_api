@@ -1,17 +1,20 @@
 import { useEffect } from "react";
 
-const MiApi = ({ personaje, setPersonaje, personajes, filtro }) => {
+const MiApi = ({ personaje, setPersonaje, personajes, filtro, setError }) => {
   const getData = async () => {
-    const respuesta = await fetch(personajes);
-    const data = await respuesta.json();
-    setPersonaje(data.results);
+    try {
+      const respuesta = await fetch(personajes);
+      const data = await respuesta.json();
+      setPersonaje(data.results);
+    } catch (error) {
+      setError("Algo salio mal");
+    }
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  console.log(filtro);
   return (
     <div className="card__container">
       {filtro !== ""
