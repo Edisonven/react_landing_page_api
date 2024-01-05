@@ -7,7 +7,7 @@ const MiApi = ({ personaje, setPersonaje, personajes, filtro, setError }) => {
       const data = await respuesta.json();
       setPersonaje(data.results);
     } catch (error) {
-      setError("Algo salio mal");
+      setError(error);
     }
   };
 
