@@ -108,7 +108,10 @@
 .footer__img {
   width: 50px;
 }
-
+.footer__title{
+  text-align: center;
+  font-size: 1rem;
+}
 @media (min-width: 576px) {
   .container__fondo {
     width: 100%;
@@ -119,5 +122,8 @@
   .error__container {
     background-image: url(../src/assets/imgs/not_found.jpg);
     width: 100%;
+  }
+  .footer__title{
+    font-size: 1.2rem;
   }
 }
