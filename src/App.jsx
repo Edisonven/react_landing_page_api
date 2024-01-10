@@ -46,6 +46,7 @@ function App() {
       )}
       <footer className="footer">
         <h3 className="footer__title">Aplicación construida para mostrar los datos de personajes de la serie animada llamada Rick and Morty</h3>
+        <img className="footer__img" src="./src/assets/imgs/logo.png" alt="" />
       </footer>
     </div>
   );
