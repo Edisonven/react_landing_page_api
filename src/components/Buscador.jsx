@@ -1,3 +1,5 @@
+import Form from "react-bootstrap/Form";
+
 const Buscador = ({ setFiltro, filtro }) => {
   const buscarPersonaje = (event) => {
     setFiltro(event.target.value);
@@ -5,9 +7,12 @@ const Buscador = ({ setFiltro, filtro }) => {
 
   return (
     <>
-      <input
+      <Form.Control
+        placeholder="Buscar personaje..."
+        type="text"
+        id="inputPassword5"
+        aria-describedby="passwordHelpBlock"
         className="buscador"
-        placeholder="Buscar Personaje..."
         value={filtro}
         onChange={buscarPersonaje}
       />
