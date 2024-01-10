@@ -26,8 +26,9 @@ const MiApi = ({
     resultFiltro = personaje;
   } else {
     resultFiltro = personaje.filter((p) =>
-      Object.values(p).some((valor) =>
-        String(valor).toLowerCase().includes(filtro.toLowerCase())
+      Object.values(p).some(
+        (valor) =>
+          valor && valor.toString().toLowerCase().includes(filtro.toLowerCase())
       )
     );
   }

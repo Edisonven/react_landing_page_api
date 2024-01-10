@@ -25,12 +25,7 @@ function App() {
             />
             <h1 className="header__title">API INFO</h1>
           </header>
-          <Buscador
-            setFiltro={setFiltro}
-            personaje={personaje}
-            resultFiltro={resultFiltro}
-            filtro={filtro}
-          ></Buscador>
+          <Buscador setFiltro={setFiltro} filtro={filtro}></Buscador>
           <section className="section">
             <p>{error}</p>
             <MiApi
@@ -38,7 +33,6 @@ function App() {
               setPersonaje={setPersonaje}
               personajes={personajes}
               filtro={filtro}
-              error={error}
               setError={setError}
               resultFiltro={resultFiltro}
             ></MiApi>
