@@ -27,7 +27,6 @@ function App() {
           </header>
           <Buscador setFiltro={setFiltro} filtro={filtro}></Buscador>
           <section className="section">
-            <p>{error}</p>
             <MiApi
               personaje={personaje}
               setPersonaje={setPersonaje}
@@ -45,6 +44,9 @@ function App() {
           </h1>
         </div>
       )}
+      <footer className="footer">
+        <h3 className="footer__title">Aplicación construida para mostrar los datos de personajes de la serie animada llamada Rick and Morty</h3>
+      </footer>
     </div>
   );
 }
