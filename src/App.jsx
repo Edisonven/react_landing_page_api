@@ -3,7 +3,7 @@ import MiApi from "./components/MiApi";
 import Buscador from "./components/Buscador";
 import { useState } from "react";
 function App() {
-  const personajes = "https://rickandmortyapi.com/api/character?page=9";
+  const personajes = "https://rickandmortyapi.com/api/character?page=3";
   const [personaje, setPersonaje] = useState([]);
   const [filtro, setFiltro] = useState("");
   const [error, setError] = useState(null);

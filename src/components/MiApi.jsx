@@ -25,12 +25,12 @@ const MiApi = ({
   if (!filtro) {
     resultFiltro = personaje;
   } else {
-    resultFiltro = personaje.filter(
-      (p) =>
-        p.name.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.status.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.species.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.gender.toLowerCase().includes(filtro.toLowerCase())
+    resultFiltro = personaje.filter((p) =>
+      Object.values(p).some(
+        (valor) =>
+          valor &&
+          valor.toString().toLowerCase().includes(filtro.toLowerCase())
+      )
     );
   }
   return (
