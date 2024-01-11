@@ -71,7 +71,6 @@
   transform: scale(1.03);
 }
 .buscador {
-  text-transform: uppercase;
   width: 95%;
   height: 40px;
   font-size: 1.2rem;

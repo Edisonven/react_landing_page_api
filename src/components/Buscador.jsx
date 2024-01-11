@@ -8,7 +8,7 @@ const Buscador = ({ setFiltro, filtro }) => {
   return (
     <>
       <Form.Control
-        placeholder="Buscar personaje..."
+        placeholder="BUSCAR PERSONAJE..."
         type="text"
         id="inputPassword5"
         aria-describedby="passwordHelpBlock"
