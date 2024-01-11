@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 
 const MiApi = ({
-  personaje,
   setPersonaje,
   personajes,
-  filtro,
   setError,
   resultFiltro,
 }) => {
@@ -22,17 +20,6 @@ const MiApi = ({
     getData();
   }, []);
 
-  if (!filtro) {
-    resultFiltro = personaje;
-  } else {
-    resultFiltro = personaje.filter(
-      (p) =>
-        p.name.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.status.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.species.toLowerCase().includes(filtro.toLowerCase()) ||
-        p.gender.toLowerCase().startsWith(filtro.toLowerCase())
-    );
-  }
   return (
     <div className="card__container">
       {resultFiltro.map((clave) => (

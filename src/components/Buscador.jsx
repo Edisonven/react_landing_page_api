@@ -1,8 +1,24 @@
+import React, { useEffect } from "react";
 import Form from "react-bootstrap/Form";
 
-const Buscador = ({ setFiltro, filtro }) => {
-  const buscarPersonaje = (event) => {
-    setFiltro(event.target.value);
+const Buscador = ({ setFiltro, filtro, setResultFiltro, personaje }) => {
+  useEffect(() => {
+    if (!filtro) {
+      setResultFiltro(personaje);
+    } else {
+      const newResult = personaje.filter(
+        (p) =>
+          p.name.toLowerCase().includes(filtro.toLowerCase()) ||
+          p.status.toLowerCase().includes(filtro.toLowerCase()) ||
+          p.species.toLowerCase().includes(filtro.toLowerCase()) ||
+          p.gender.toLowerCase().startsWith(filtro.toLowerCase())
+      );
+      setResultFiltro(newResult);
+    }
+  }, [filtro, personaje, setResultFiltro]);
+
+  const buscarPersonaje = (e) => {
+    setFiltro(e.target.value);
   };
 
   return (
@@ -10,8 +26,6 @@ const Buscador = ({ setFiltro, filtro }) => {
       <Form.Control
         placeholder="BUSCAR PERSONAJE..."
         type="text"
-        id="inputPassword5"
-        aria-describedby="passwordHelpBlock"
         className="buscador"
         value={filtro}
         onChange={buscarPersonaje}

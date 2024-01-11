@@ -7,7 +7,7 @@ function App() {
   const [personaje, setPersonaje] = useState([]);
   const [filtro, setFiltro] = useState("");
   const [error, setError] = useState(null);
-  let resultFiltro = [];
+  const [resultFiltro, setResultFiltro] = useState([]);
   return (
     <div>
       {!error ? (
@@ -25,13 +25,17 @@ function App() {
             />
             <h1 className="header__title">API INFO</h1>
           </header>
-          <Buscador setFiltro={setFiltro} filtro={filtro}></Buscador>
+          <Buscador
+            setFiltro={setFiltro}
+            filtro={filtro}
+            resultFiltro={resultFiltro}
+            setResultFiltro={setResultFiltro}
+            personaje={personaje}
+          ></Buscador>
           <section className="section">
             <MiApi
-              personaje={personaje}
               setPersonaje={setPersonaje}
               personajes={personajes}
-              filtro={filtro}
               setError={setError}
               resultFiltro={resultFiltro}
             ></MiApi>
@@ -45,7 +49,10 @@ function App() {
         </div>
       )}
       <footer className="footer">
-        <h5 className="footer__title">Aplicación construida para mostrar los datos de personajes de la serie animada llamada Rick and Morty</h5>
+        <h5 className="footer__title">
+          Aplicación construida para mostrar los datos de personajes de la serie
+          animada llamada Rick and Morty
+        </h5>
         <img className="footer__img" src="./src/assets/imgs/logo.png" alt="" />
       </footer>
     </div>
