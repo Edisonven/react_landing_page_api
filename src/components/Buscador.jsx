@@ -7,16 +7,17 @@ const Buscador = ({ setFiltro, filtro, setResultFiltro, personaje }) => {
       const originalResult = personaje;
       setResultFiltro(originalResult);
     } else {
-      const newResult = personaje
-        .sort()
-        .filter(
-          (p) =>
-            p.name.toLowerCase().includes(filtro.toLowerCase()) ||
-            p.status.toLowerCase().includes(filtro.toLowerCase()) ||
-            p.species.toLowerCase().includes(filtro.toLowerCase()) ||
-            p.gender.toLowerCase().startsWith(filtro.toLowerCase())
-        )
-        .sort((a, b) => a.name.localeCompare(b.name));
+      const newResult = [
+        ...personaje
+          .filter(
+            (p) =>
+              p.name.toLowerCase().includes(filtro.toLowerCase()) ||
+              p.status.toLowerCase().includes(filtro.toLowerCase()) ||
+              p.species.toLowerCase().includes(filtro.toLowerCase()) ||
+              p.gender.toLowerCase().startsWith(filtro.toLowerCase())
+          )
+          .sort((a, b) => a.name.localeCompare(b.name)),
+      ];
       setResultFiltro(newResult);
     }
   }, [filtro, personaje, setResultFiltro]);
