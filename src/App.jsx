@@ -28,7 +28,6 @@ function App() {
           <Buscador
             setFiltro={setFiltro}
             filtro={filtro}
-            resultFiltro={resultFiltro}
             setResultFiltro={setResultFiltro}
             personaje={personaje}
           ></Buscador>

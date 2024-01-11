@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 
-const MiApi = ({
-  setPersonaje,
-  personajes,
-  setError,
-  resultFiltro,
-}) => {
+const MiApi = ({ setPersonaje, personajes, setError, resultFiltro }) => {
   const getData = async () => {
     try {
       const respuesta = await fetch(personajes);
