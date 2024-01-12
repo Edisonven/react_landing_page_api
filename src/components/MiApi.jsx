@@ -32,25 +32,31 @@ const MiApi = ({ setPersonaje, personajes, setError, resultFiltro }) => {
                 {/*Condicional que muestra una propiedad distinta y un ícono según el contenido de dicha propiedad */}
                 {character.status === "Alive" ? (
                   <div className="card__status">
-                    <p>Estado:</p>
+                    <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_1.svg" alt="" />
                     <p>Alive</p>
                   </div>
                 ) : character.status === "Dead" ? (
                   <div className="card__status">
-                    <p>Estado:</p>
+                    <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_2.svg" alt="" />
                     <p>Dead</p>
                   </div>
                 ) : (
                   <div className="card__status">
-                    <p>Estado:</p>
+                    <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_3.svg" alt="" />
                     <p>Unknown</p>
                   </div>
                 )}
-                <p>Género: {character.gender}</p>
-                <p>Especie: {character.species}</p>
+                <div className="card__status">
+                  <p className="card__property">Género:</p>
+                  <p>{character.gender}</p>
+                </div>
+                <div className="card__status">
+                  <p className="card__property">Especie:</p>
+                  <p>{character.species}</p>
+                </div>
               </div>
             ))
             //Método que muestra los resultados del mapeo en reversa al orden original
@@ -59,7 +65,7 @@ const MiApi = ({ setPersonaje, personajes, setError, resultFiltro }) => {
       ) : (
         //Mensaje que se muestra al no encontrar coincidencias en la búsqueda de personajes
         <h2 className="noCharacter">
-          Este personaje no se encuentra en ningún universo, Prueba a buscar
+          Este personaje no se encuentra en ningún universo. !Prueba a buscar
           otra vez!
         </h2>
       )}
