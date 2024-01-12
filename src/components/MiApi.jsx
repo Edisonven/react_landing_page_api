@@ -34,28 +34,38 @@ const MiApi = ({ setPersonaje, personajes, setError, resultFiltro }) => {
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_1.svg" alt="" />
-                    <p>Alive</p>
+                    <p>{character.status}</p>
                   </div>
                 ) : character.status === "Dead" ? (
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_2.svg" alt="" />
-                    <p>Dead</p>
+                    <p>{character.status}</p>
                   </div>
                 ) : (
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
                     <img src="./src/assets/imgs/status_3.svg" alt="" />
-                    <p>Unknown</p>
+                    <p>
+                      {/* Metodo que toma la primera letra de la propiedad "status" y la convierte a mayuscula, luego se concatena con el resto de la cadena de la*/}
+                      {character.status.charAt(0).toUpperCase() +
+                        character.status.slice(1)}
+                    </p>
                   </div>
                 )}
                 <div className="card__status">
                   <p className="card__property">Género:</p>
-                  <p>{character.gender}</p>
+                  <p>
+                    {character.gender.charAt(0).toUpperCase() +
+                      character.gender.slice(1)}
+                  </p>
                 </div>
                 <div className="card__status">
                   <p className="card__property">Especie:</p>
-                  <p>{character.species}</p>
+                  <p>
+                    {character.species.charAt(0).toUpperCase() +
+                      character.species.slice(1)}
+                  </p>
                 </div>
               </div>
             ))

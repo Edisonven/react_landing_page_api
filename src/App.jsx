@@ -4,7 +4,7 @@ import Buscador from "./components/Buscador";
 import { useState } from "react";
 function App() {
   // estados declarados para el endpoint, seteo de personajes desde el endpoint, filtrado de personajes, y resultado del filtrado de personajes
-  const personajes = "https://rickandmortyapi.com/api/character?page=3";
+  const personajes = "https://rickandmortyapi.com/api/character?page=8";
   const [personaje, setPersonaje] = useState([]);
   const [filtro, setFiltro] = useState("");
   const [error, setError] = useState(null);
