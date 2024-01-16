@@ -144,6 +144,9 @@ p {
   --bs-pagination-color: var(--color_2) !important;
   --bs-pagination-bg: var(--react_color_2) !important;
 }
+.pagination__item {
+  --bs-pagination-active-bg: #6c757d;
+}
 
 @media (min-width: 576px) {
   .container__fondo {
