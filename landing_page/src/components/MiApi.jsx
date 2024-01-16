@@ -1,21 +1,27 @@
 import { useEffect } from "react";
 
-const MiApi = ({ setPersonaje, personajes, setError, resultFiltro }) => {
+const MiApi = ({
+  setPersonaje,
+  personajes,
+  setError,
+  resultFiltro,
+  setTotalPages,
+}) => {
   //Función que hace el llamado al endpoint de la API
-  const getData = async () => {
-    try {
-      const respuesta = await fetch(personajes);
-      const data = await respuesta.json();
-      setPersonaje(data.results);
-    } catch (error) {
-      setError(error);
-    }
-  };
-
-  //Efecto que se encarga de mostrar el llamado a la API en el momento que se carga la página (Montaje)
   useEffect(() => {
+    const getData = async () => {
+      try {
+        const respuesta = await fetch(personajes);
+        const data = await respuesta.json();
+        setPersonaje(data.results);
+        setTotalPages(data.info.pages);
+      } catch (error) {
+        setError(error);
+      }
+    };
     getData();
-  }, []);
+    //Dependencia que actualiza personajes al detectar un cambio en currentPage
+  }, [personajes]);
 
   return (
     //Contenedor de las tarjetas mostradas en pantalla luego de ser mapeadas desde el endpoint (estado seteado)

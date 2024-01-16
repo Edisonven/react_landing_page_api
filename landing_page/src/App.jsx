@@ -1,10 +1,14 @@
 import "./App.css";
 import MiApi from "./components/MiApi";
 import Buscador from "./components/Buscador";
+import PaginatedList from "./components/Pagination";
 import { useState } from "react";
 function App() {
-  // estados declarados para el endpoint, seteo de personajes desde el endpoint, filtrado de personajes, y resultado del filtrado de personajes
-  const personajes = "https://rickandmortyapi.com/api/character?page=8";
+  // estados declarados para el endpoint, seteo de personajes desde el endpoint, filtrado de personajes,  resultado del filtrado de personajes, paginas del paginado y pagina actual del paginado
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const personajes = `https://rickandmortyapi.com/api/character?page=${currentPage}`;
   const [personaje, setPersonaje] = useState([]);
   const [filtro, setFiltro] = useState("");
   const [error, setError] = useState(null);
@@ -42,6 +46,7 @@ function App() {
               personajes={personajes}
               setError={setError}
               resultFiltro={resultFiltro}
+              setTotalPages={setTotalPages}
             ></MiApi>
           </section>
         </div>
@@ -53,6 +58,11 @@ function App() {
           </h1>
         </div>
       )}
+      <PaginatedList
+        totalPages={totalPages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      ></PaginatedList>
       <footer className="footer">
         <h5 className="footer__title">
           Aplicación construida para mostrar los datos de personajes de la serie
