@@ -146,6 +146,7 @@ p {
 }
 .pagination__item {
   --bs-pagination-active-bg: #6c757d;
+  width: 40px;
 }
 
 @media (min-width: 576px) {
