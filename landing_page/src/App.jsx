@@ -3,6 +3,7 @@ import MiApi from "./components/MiApi";
 import Buscador from "./components/Buscador";
 import PaginatedList from "./components/Pagination";
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   // estados declarados para el endpoint, seteo de personajes desde el endpoint, filtrado de personajes,  resultado del filtrado de personajes, paginas del paginado y pagina actual del paginado
 

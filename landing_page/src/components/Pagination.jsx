@@ -27,6 +27,7 @@ const PaginatedList = ({ totalPages, currentPage, setCurrentPage }) => {
     for (let i = startPage; i <= endPage; i++) {
       items.push(
         <Pagination.Item
+          className="pagination__item"
           key={i}
           active={i === currentPage}
           onClick={() => handlePageChange(i)}
@@ -40,9 +41,9 @@ const PaginatedList = ({ totalPages, currentPage, setCurrentPage }) => {
   };
 
   return (
-    <div>
+    <div className="pagination__container">
       {/* Renderizado de componente paginado desde bootstrap */}
-      <Pagination>
+      <Pagination className="pagination__items">
         {/* Se asigna la primera página en el llamado a la función al hacer click*/}
         <Pagination.First onClick={() => handlePageChange(1)} />
         <Pagination.Prev
