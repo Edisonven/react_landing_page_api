@@ -19,7 +19,7 @@ const MiApi = ({
       setError(error);
     }
   };
-  // Efecto que ejecuta la función getData al decetar algún cambio en ella
+  // Efecto que ejecuta la función getData al detectar algún cambio en ella
   useEffect(() => {
     getData();
   });

@@ -93,7 +93,7 @@ p {
   transform: scale(1.03);
 }
 .buscador {
-  width: 95%;
+  width: 87% !important;
   height: 40px;
   font-size: 1.2rem !important;
   background-color: var(--color_3);
