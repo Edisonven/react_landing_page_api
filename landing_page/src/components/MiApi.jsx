@@ -7,22 +7,22 @@ const MiApi = ({
   resultFiltro,
   setTotalPages,
 }) => {
-  //Función que hace el llamado al endpoint de la API
-
-  const getData = async () => {
-    try {
-      const respuesta = await fetch(personajes);
-      const data = await respuesta.json();
-      setPersonaje(data.results);
-      setTotalPages(data.info.pages);
-    } catch (error) {
-      setError(error);
-    }
-  };
-  // Efecto que ejecuta la función getData al detectar algún cambio en ella
+  // Efecto que ejecuta la función getData al detectar algún cambio en ella o en su dependecia
   useEffect(() => {
+    //Función que hace el llamado al endpoint de la API
+    const getData = async () => {
+      try {
+        const respuesta = await fetch(personajes);
+        const data = await respuesta.json();
+        setPersonaje(data.results);
+        setTotalPages(data.info.pages);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
     getData();
-  });
+  }, [personajes]);
 
   return (
     //Contenedor de las tarjetas mostradas en pantalla luego de ser mapeadas desde el endpoint (estado seteado)

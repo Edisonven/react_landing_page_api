@@ -3,7 +3,7 @@ import MiApi from "./components/MiApi";
 import Buscador from "./components/Buscador";
 import PaginatedList from "./components/Pagination";
 import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   // estados declarados para el endpoint, seteo de personajes desde el endpoint, filtrado de personajes,  resultado del filtrado de personajes, paginas del paginado y pagina actual del paginado
 
@@ -14,6 +14,7 @@ function App() {
   const [filtro, setFiltro] = useState("");
   const [error, setError] = useState(null);
   const [resultFiltro, setResultFiltro] = useState([]);
+
   return (
     //Landing page que muestra los componentes importados y sus estilos
     <div>
