@@ -29,7 +29,7 @@ function App() {
           <header className="header">
             <img
               className="header__img"
-              src="./src/assets/imgs/ramlogo.png"
+              src="assets/imgs/ramlogo.png"
               alt=""
             />
             <h1 className="header__title">API INFO</h1>
