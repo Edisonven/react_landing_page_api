@@ -23,7 +23,7 @@ function App() {
         <div className="container">
           <img
             className="container__fondo"
-            src="./src/assets/imgs/fondo_2_copia.jpeg"
+            src="assets/imgs/fondo2copia.jpeg"
             alt=""
           />
           <header className="header">
