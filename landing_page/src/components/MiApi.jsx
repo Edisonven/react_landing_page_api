@@ -40,19 +40,19 @@ const MiApi = ({
                 {character.status === "Alive" ? (
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
-                    <img src="assets/imgs/status_1.svg" alt="" />
+                    <img src="assets/imgs/status1.svg" alt="" />
                     <p>{character.status}</p>
                   </div>
                 ) : character.status === "Dead" ? (
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
-                    <img src="assets/imgs/status_2.svg" alt="" />
+                    <img src="assets/imgs/status2.svg" alt="" />
                     <p>{character.status}</p>
                   </div>
                 ) : (
                   <div className="card__status">
                     <p className="card__property">Estado:</p>
-                    <img src="assets/imgs/status_3.svg" alt="" />
+                    <img src="assets/imgs/status3.svg" alt="" />
                     <p>
                       {/* Metodo que toma la primera letra de la propiedad "status" y la convierte a mayuscula, luego se concatena con el resto de la cadena*/}
                       {character.status.charAt(0).toUpperCase() +
