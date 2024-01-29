@@ -70,7 +70,7 @@ function App() {
           Aplicación construida para mostrar los datos de personajes de la serie
           animada llamada Rick and Morty
         </h5>
-        <img className="footer__img" src="./src/assets/imgs/logo.png" alt="" />
+        <img className="footer__img" src="assets/imgs/logo.png" alt="" />
       </footer>
     </div>
   );
